@@ -8,7 +8,7 @@ CORS(app)
 db_config = {
     'host': 'localhost',
     'user': 'root',
-    'password': '12345678',  # <-- change to your MySQL password
+    'password': '12345678',  
     'database': 'university'
 }
 

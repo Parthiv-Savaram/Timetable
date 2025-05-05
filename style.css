@@ -1,0 +1,134 @@
+/* Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+}
+
+/* Make spline viewer the full background */
+.bg-spline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Centered glassy container */
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  position: relative;
+  z-index: 1;
+}
+
+/* Form and buttons */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+form input, select {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  color: #000;
+}
+
+form button, .logout, .student-view {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+form button:hover, .logout:hover, .student-view:hover {
+  background-color: rgba(0, 123, 255, 0.5);
+}
+
+.student-view {
+  margin-top: 20px;
+  background-color: #00bcd4;
+}
+
+.student-view:hover {
+  background-color: rgba(0, 188, 212, 0.5);
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+th, td {
+  border: 2px solid black;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.actions-header, .actions-cell {
+  width: 150px;
+}
+
+.edit {
+  background-color: #28a745;
+  margin-right: 5px;
+}
+
+.delete {
+  background-color: #dc3545;
+}
+
+/* Tab buttons */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.tab.active,
+.tab:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Hide and show content areas */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}

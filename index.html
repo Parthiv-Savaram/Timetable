@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>University Portal</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.89/build/spline-viewer.js"></script>
+</head>
+<body>
+  <spline-viewer class="bg-spline" url="https://prod.spline.design/17eYxb7NUVipViQO/scene.splinecode"></spline-viewer>
+
+  <div class="container" id="auth-section">
+    <div class="tab-buttons">
+      <button class="tab active" onclick="showTab('login')">Login</button>
+      <button class="tab" onclick="showTab('register')">Register</button>
+    </div>
+    <div id="login-tab" class="tab-content active">
+      <form id="login-form">
+        <input type="text" id="username" placeholder="Username" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <div id="register-tab" class="tab-content">
+      <form id="register-form">
+        <input type="text" id="new-username" placeholder="New Username" required />
+        <input type="password" id="new-password" placeholder="New Password" required />
+        <button type="submit">Register</button>
+      </form>
+    </div>
+    <button onclick="studentView()" class="student-view">View as Student</button>
+  </div>
+
+  <div class="container" id="timetable-section" style="display:none;">
+    <h2>Welcome, <span id="user-label"></span>!</h2>
+    <label for="course-select">Select a course:</label>
+    <select id="course-select"></select>
+
+    <table id="timetable-table">
+      <thead>
+        <tr id="timetable-headers">
+          <th>Day</th>
+          <th>Time</th>
+          <th>Subject</th>
+          <th>Room</th>
+          <th>Room Capacity</th>
+          <th>Availability</th>
+          <th class="actions-header">Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <h3>Manage Timetable</h3>
+    <form id="timetable-form">
+      <input type="hidden" id="entry-id" />
+      <input type="text" id="day" placeholder="Day" required />
+      <input type="text" id="time" placeholder="Time" required />
+      <input type="text" id="subject" placeholder="Subject" required />
+      <input type="text" id="room" placeholder="Room" required />
+      <input type="number" id="capacity" placeholder="Room Capacity" required />
+      <input type="text" id="availability" placeholder="Availability" required />
+      <button type="submit">Add / Update</button>
+    </form>
+
+    <h3>Add New Course</h3>
+    <form id="course-form">
+      <input type="text" id="course-name" placeholder="Course Name" required />
+      <button type="submit">Add Course</button>
+    </form>
+
+    <button class="logout" id="back-button" onclick="goBack()">Logout</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

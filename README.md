@@ -1,2 +1,4 @@
 # Timetable
-project for university timetable 
+Project for university timetable 
+Done By: Savaram Parthiv
+Matricola number: 549440

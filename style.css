@@ -1,4 +1,4 @@
-/* Reset */
+
 body, html {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@ body, html {
   color: #fff;
 }
 
-/* Make spline viewer the full background */
+
 .bg-spline {
   position: fixed;
   top: 0;
@@ -17,7 +17,7 @@ body, html {
   z-index: -1;
 }
 
-/* Centered glassy container */
+
 .container {
   max-width: 800px;
   margin: 50px auto;
@@ -32,7 +32,7 @@ body, html {
   z-index: 1;
 }
 
-/* Form and buttons */
+
 form {
   display: flex;
   flex-direction: column;
@@ -73,7 +73,7 @@ form button:hover, .logout:hover, .student-view:hover {
   background-color: rgba(0, 188, 212, 0.5);
 }
 
-/* Table styling */
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -101,7 +101,7 @@ th, td {
   background-color: #dc3545;
 }
 
-/* Tab buttons */
+
 .tab-buttons {
   display: flex;
   justify-content: center;
@@ -124,7 +124,7 @@ th, td {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-/* Hide and show content areas */
+
 .tab-content {
   display: none;
 }

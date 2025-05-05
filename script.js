@@ -72,8 +72,6 @@ async function loadTimetable() {
   const tbody = document.querySelector("#timetable-table tbody");
   const isStudent = document.getElementById("user-label").textContent === "Student";
   tbody.innerHTML = "";
-
-  // Set header visibility
   const actionsHeader = document.querySelector(".actions-header");
   actionsHeader.style.display = isStudent ? "none" : "table-cell";
 
@@ -161,18 +159,15 @@ function studentView() {
   document.getElementById("timetable-section").style.display = "block";
   document.getElementById("user-label").textContent = "Student";
 
-  // Hide forms
   document.getElementById("timetable-form").style.display = "none";
   document.getElementById("course-form").style.display = "none";
 
-  // Hide the headers
-  document.querySelector("h3:nth-of-type(1)").style.display = "none"; // Manage Timetable
-  document.querySelector("h3:nth-of-type(2)").style.display = "none"; // Add New Course
+  document.querySelector("h3:nth-of-type(1)").style.display = "none"; 
+  document.querySelector("h3:nth-of-type(2)").style.display = "none"; 
 
-  // Change logout to back
   document.getElementById("back-button").textContent = "Back";
 
-  // Hide actions header
+  
   const actionsHeader = document.querySelector(".actions-header");
   if (actionsHeader) actionsHeader.style.display = "none";
 
@@ -185,8 +180,8 @@ function goBack() {
   document.getElementById("auth-section").style.display = "block";
   document.getElementById("timetable-form").style.display = "flex";
   document.getElementById("course-form").style.display = "flex";
-  document.querySelector("h3:nth-of-type(1)").style.display = "block"; // Manage Timetable
-  document.querySelector("h3:nth-of-type(2)").style.display = "block"; // Add New Course
+  document.querySelector("h3:nth-of-type(1)").style.display = "block"; 
+  document.querySelector("h3:nth-of-type(2)").style.display = "block"; 
   document.getElementById("back-button").textContent = "Logout";
   const actionsHeader = document.querySelector(".actions-header");
   if (actionsHeader) actionsHeader.style.display = "table-cell";
